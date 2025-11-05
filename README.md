@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+# Latihan Frontend — CRUD & Autentikasi (React + Express + PostgreSQL)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📘 Deskripsi Proyek
+Proyek ini adalah aplikasi **Fullstack CRUD dengan sistem autentikasi JWT** menggunakan:
+- **Frontend:** React.js + React-Bootstrap  
+- **Backend:** Express.js + PostgreSQL  
+- **Autentikasi:** JWT (JSON Web Token)  
+- **Fitur:** Login, Register, dan CRUD (Tambah, Edit, Hapus, Tampil Data)  
+- **UI:** Tema **ungu elegan**, modern, dan responsif  
 
-## Available Scripts
+Aplikasi ini dikembangkan sebagai latihan tugas integrasi **Frontend dan Backend**.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🏗️ Struktur Project
+![Struktur File](./screenshot/struktur_file.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ⚙️ Teknologi yang Digunakan
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🔹 Frontend
+- React.js
+- React Router DOM
+- React Bootstrap
+- Axios
+- SweetAlert2 (popup interaktif)
 
-### `npm run build`
+### 🔹 Backend
+- Express.js
+- PostgreSQL (`pg`)
+- JWT (`jsonwebtoken`)
+- bcryptjs
+- dotenv
+- cors
+- nodemon
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧰 Instalasi & Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/syahmirian/latihan-frontend.git
+cd latihan-frontend
 
-### `npm run eject`
+2️⃣ Setup Backend
+cd backend-pg
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Buat file .env berdasarkan contoh .env.example:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+PORT=5000
+JWT_SECRET=your_secret_key_here
+PGUSER=postgres
+PGPASSWORD=your_password_here
+PGHOST=localhost
+PGPORT=5432
+PGDATABASE=latihan_frontend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+Buat database di PostgreSQL:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+CREATE DATABASE latihan_frontend;
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100) UNIQUE,
+  password VARCHAR(200)
+);
 
-### Code Splitting
+CREATE TABLE items (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(200),
+  description TEXT,
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
+);
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+Jalankan backend:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+npm run dev
 
-### Making a Progressive Web App
+3️⃣ Setup Frontend
+cd ..
+npm install
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+Frontend berjalan di:
+👉 http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+🔐 Fitur Utama
+Fitur	Deskripsi
+🔸 Register	Membuat akun baru
+🔸 Login	Autentikasi dengan JWT
+🔸 Private Route	Dashboard hanya untuk user login
+🔸 CRUD	Tambah, Edit, Hapus, dan Lihat Data
+🔸 Modal CRUD	Semua aksi CRUD dilakukan lewat modal
+🔸 SweetAlert2	Popup sukses/gagal yang interaktif
+🔸 UI clean, lembut, dan responsif
 
-### Deployment
+## Screenshot Aplikasi
+### 🔹 Halaman Login
+> Tampilan form login dan hasil login sukses
+![Login](./screenshot/login.png)
+![Login Sukses](./screenshot/login_sukses.png)
+ ---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 🔹 Halaman Register
+> Form pendaftaran akun baru dan notifikasi registrasi sukses
+![Register](./screenshot/regist.png)
+![Register Sukses](./screenshot/regist_sukses.png)
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 🏠 Dashboard
+> Tampilan dashboard utama setelah login
+![Dashboard](./screenshot/dashboard.png)
+
+---
+
+### ➕ Tambah Data
+> Modal tambah data baru dan notifikasi sukses
+![Tambah Data](./screenshot/tambah_data.png)
+![Sukses Tambah Data](./screenshot/sukses_tambah_data.png)
+
+---
+
+### ✏️ Edit Data
+> Modal edit data dan hasil update sukses
+![Edit](./screenshot/edit.png)
+![Edit Sukses](./screenshot/edit_sukses.png)
+
+---
+
+### 🗑️ Hapus Data
+> Konfirmasi hapus dan notifikasi sukses
+![Hapus](./screenshot/hapus.png)
+![Hapus Sukses](./screenshot/hapus_sukses.png)
+
+
