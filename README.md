@@ -103,43 +103,28 @@ Fitur	Deskripsi
 🔸 SweetAlert2	Popup sukses/gagal yang interaktif
 🔸 UI clean, lembut, dan responsif
 
-## Screenshot Aplikasi
+## 🖼️ Screenshot Aplikasi
+
 ### 🔹 Halaman Login
-> Tampilan form login dan hasil login sukses
 ![Login](./screenshot/login.png)
 ![Login Sukses](./screenshot/login_sukses.png)
- ---
 
 ### 🔹 Halaman Register
-> Form pendaftaran akun baru dan notifikasi registrasi sukses
 ![Register](./screenshot/regist.png)
 ![Register Sukses](./screenshot/regist_sukses.png)
 
----
-
 ### 🏠 Dashboard
-> Tampilan dashboard utama setelah login
 ![Dashboard](./screenshot/dashboard.png)
 
----
-
 ### ➕ Tambah Data
-> Modal tambah data baru dan notifikasi sukses
 ![Tambah Data](./screenshot/tambah_data.png)
 ![Sukses Tambah Data](./screenshot/sukses_tambah_data.png)
 
----
-
 ### ✏️ Edit Data
-> Modal edit data dan hasil update sukses
 ![Edit](./screenshot/edit.png)
 ![Edit Sukses](./screenshot/edit_sukses.png)
 
----
-
 ### 🗑️ Hapus Data
-> Konfirmasi hapus dan notifikasi sukses
 ![Hapus](./screenshot/hapus.png)
 ![Hapus Sukses](./screenshot/hapus_sukses.png)
-
 
