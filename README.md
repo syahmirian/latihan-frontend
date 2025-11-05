@@ -15,6 +15,31 @@ Aplikasi ini dikembangkan sebagai latihan tugas integrasi **Frontend dan Backend
 ## 🏗️ Struktur Project
 ![Struktur File](./screenshot/struktur_file.png)
 
+## 🖼️ Screenshot Aplikasi
+
+### 🔹 Halaman Login
+![Login](./screenshot/login.png)
+![Login Sukses](./screenshot/login_sukses.png)
+
+### 🔹 Halaman Register
+![Register](./screenshot/regist.png)
+![Register Sukses](./screenshot/regist_sukses.png)
+
+### 🏠 Dashboard
+![Dashboard](./screenshot/dashboard.png)
+
+### ➕ Tambah Data
+![Tambah Data](./screenshot/tambah_data.png)
+![Sukses Tambah Data](./screenshot/sukses_tambah_data.png)
+
+### ✏️ Edit Data
+![Edit](./screenshot/edit.png)
+![Edit Sukses](./screenshot/edit_sukses.png)
+
+### 🗑️ Hapus Data
+![Hapus](./screenshot/hapus.png)
+![Hapus Sukses](./screenshot/hapus_sukses.png)
+
 
 ---
 
@@ -103,29 +128,9 @@ Fitur	Deskripsi
 🔸 SweetAlert2	Popup sukses/gagal yang interaktif
 🔸 UI clean, lembut, dan responsif
 
-## 🖼️ Screenshot Aplikasi
 
-### 🔹 Halaman Login
-![Login](./screenshot/login.png)
-![Login Sukses](./screenshot/login_sukses.png)
+--
 
-### 🔹 Halaman Register
-![Register](./screenshot/regist.png)
-![Register Sukses](./screenshot/regist_sukses.png)
 
-### 🏠 Dashboard
-![Dashboard](./screenshot/dashboard.png)
-
-### ➕ Tambah Data
-![Tambah Data](./screenshot/tambah_data.png)
-![Sukses Tambah Data](./screenshot/sukses_tambah_data.png)
-
-### ✏️ Edit Data
-![Edit](./screenshot/edit.png)
-![Edit Sukses](./screenshot/edit_sukses.png)
-
-### 🗑️ Hapus Data
-![Hapus](./screenshot/hapus.png)
-![Hapus Sukses](./screenshot/hapus_sukses.png)
 
 
